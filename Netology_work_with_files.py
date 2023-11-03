@@ -1,4 +1,5 @@
 cook_book = {}
+# Ниже создаем check_for_num для перебора в цикле с целью исключить строку, идущую после названия блюда в recipes.txt
 check_for_num = [str(i) for i in list(range(10))]
 with open('recipes.txt', encoding='utf-8') as f:
     while True:
@@ -31,5 +32,6 @@ def get_shop_list_by_dishes(dishes, person_count):
                         if value in count_dict else cook_book[dish][num]['quantity'] * person_count}
                 break
     return print(count_dict)
+
 
 get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
